@@ -1,0 +1,64 @@
+
+
+# Grails build dir #
+####################
+application/target/
+
+# Java packages #
+#################
+*.war
+*.ear
+
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Archives #
+############
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.rar
+*.tar
+*.zip
+
+# Logs and databases #
+######################
+*.log
+*.sqlite
+*.out
+
+# OS generated files #
+######################
+.DS_Store*
+ehthumbs.db
+Icon?
+Thumbs.db
+
+# Cobertura Code Coverage Files #
+#################################
+cobertura.ser
+
+GrailsProject/bin
+HealthCheck/bin
+load_all_v1.2_grouped_recs.txt
+load_all_v1.2_grouped_recs.txt.backup
+suncat-config.groovy
+load_all_v1.2_grouped_recs-03072012.txt
+
+# Invisible file to let git manage empty dirs #
+###############################################
+!.gitemptydir
+load_all_v1.2_grouped_recs-13072012.txt
+load_all_v1.2-v0.9-08082012.txt
+test.xml.old
+load_all_v3.1_grouped_recs.txt
+load_all_v4.2_grouped_recs.txt
