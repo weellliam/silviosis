@@ -4,6 +4,10 @@
 ####################
 application/target/
 
+# Gallery #
+###########
+application/web-app/gallery/
+
 # Java packages #
 #################
 *.war

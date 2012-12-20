@@ -18,7 +18,7 @@
     
     <title><g:layoutTitle default="Silviosis"/></title>
                 
-    <r:require modules="bootstrap"/>
+    <r:require modules="application, bootstrap"/>
                 
     <g:layoutHead/>
     <r:layoutResources />
@@ -26,7 +26,7 @@
   <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
-        <div class="container">
+        <div class="container-fluid">
           <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
@@ -34,23 +34,27 @@
           </a>
           <a class="brand" href="${request.contextPath}">Silviosis</a>
             <ul class="nav">
-              <li class="active">
+              <li <%= request.forwardURI == "${createLink(uri: '/')}" ? ' class="active"' : '' %>>
                 <a href="#">Home</a>
               </li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Gallery</a></li>
-              <li><a href="#">Blog</a></li>
-              <li><a href="#">Contact</a></li>
+              <li <%='about'== controllerName ? ' class="active"' : '' %>>
+                <a href="#">About</a>
+              </li>
+              <li <%='gallery'== controllerName ? ' class="active"' : '' %>>
+                <a href="#">Gallery</a>
+              </li>
+              <li <%='blog'== controllerName ? ' class="active"' : '' %>>
+                <a href="#">Blog</a>
+              </li>
+              <li <%='contact'== controllerName ? ' class="active"' : '' %>>
+                <a href="#">Contact</a>
+              </li>
             </ul>
         </div>
       </div>
     </div>
-
-    <div class="container">
-
-      <g:layoutBody/>
-
-    </div>
+    
+    <g:layoutBody/>
     
     <r:layoutResources />
   </body>
