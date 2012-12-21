@@ -31,11 +31,10 @@
         </p>
       </header>
       
-      <%--
       <div id="gallery" data-toggle="modal-gallery" data-target="#modal-gallery"></div>
-      --%>
       <br>
       
+      <%--
       <div id="gallery" data-toggle="modal-gallery" data-target="#modal-gallery">
         <a href="${resource(dir:'gallery',file:'1.png')}" rel="gallery" title="One">
           <img src="${resource(dir:'gallery',file:'1.png')}">
@@ -47,6 +46,7 @@
           <img src="${resource(dir:'gallery',file:'4.png')}">
         </a>
       </div>
+      --%>
     </div>
     
     <!-- modal-gallery is the modal dialog used for the image gallery -->

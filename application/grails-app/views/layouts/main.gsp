@@ -34,7 +34,7 @@
           </a>
           <a class="brand" href="${request.contextPath}">Silviosis</a>
             <ul class="nav">
-              <li <%= request.forwardURI == "${createLink(uri: '/')}" ? ' class="active"' : '' %>>
+              <li <%= request.forwardURI == "${createLink(uri: '/home')}" ? ' class="active"' : '' %>>
                 <a href="#">Home</a>
               </li>
               <li <%='about'== controllerName ? ' class="active"' : '' %>>
