@@ -49,6 +49,7 @@ grails.project.dependency.resolution = {
         
         compile ":spring-security-core:1.2.7.1"
         compile ":twitter-bootstrap:2.2.2"
+        compile ":image-tools:0.1" //allow thumbnail
 
         build ":tomcat:$grailsVersion"
 

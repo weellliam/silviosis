@@ -6,6 +6,15 @@
     
     <r:require modules="bootstrap-gallery"/>
     
+    <style type="text/css">
+      #gallery img, #gallery a {
+        width: 75px; 
+        height: 75px;
+        border: 0;
+        padding: 0;
+        margin: 0;
+      }
+    </style>
   </head>
 
   <body>
@@ -21,19 +30,23 @@
           <button id="toggle-fullscreen" class="btn btn-large btn-primary" data-toggle="button">Toggle Fullscreen</button>
         </p>
       </header>
-    
-      <div id="gallery" data-toggle="modal-gallery" data-target="#modal-gallery"></div>
-    
-      <br>
       
       <%--
-      <div id="gallery" data-toggle="modal-gallery" data-target="#modal-gallery">
-        <a href="${resource(dir:'gallery',file:'1.png')}" title="One" rel="gallery">One</a>
-        <a href="${resource(dir:'gallery',file:'2.png')}" title="Two" rel="gallery">Two</a>
-        <a href="${resource(dir:'gallery',file:'3.png')}" title="Three" rel="gallery">Three</a>
-        <a href="${resource(dir:'gallery',file:'4.png')}" title="Four" rel="gallery">Four</a>
-      </div>
+      <div id="gallery" data-toggle="modal-gallery" data-target="#modal-gallery"></div>
       --%>
+      <br>
+      
+      <div id="gallery" data-toggle="modal-gallery" data-target="#modal-gallery">
+        <a href="${resource(dir:'gallery',file:'1.png')}" rel="gallery" title="One">
+          <img src="${resource(dir:'gallery',file:'1.png')}">
+        </a>
+        <a href="${resource(dir:'gallery',file:'2.png')}" rel="gallery" title="Two">
+          <img src="${resource(dir:'gallery',file:'2.png')}">
+        </a>
+        <a href="${resource(dir:'gallery',file:'4.png')}" rel="gallery" title="Four">
+          <img src="${resource(dir:'gallery',file:'4.png')}">
+        </a>
+      </div>
     </div>
     
     <!-- modal-gallery is the modal dialog used for the image gallery -->

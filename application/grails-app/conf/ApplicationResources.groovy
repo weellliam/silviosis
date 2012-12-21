@@ -20,4 +20,13 @@ modules = {
         resource url:[dir: 'js', file: 'load-image.min.js']
         resource url:[dir: 'js', file: (dev ? 'bootstrap-image-gallery.js' : 'bootstrap-image-gallery.min.js')]
     }
+    
+    'nailthumb' {
+        defaultBundle 'photo'
+        dependsOn 'jquery'
+        
+        resource url:[dir: 'css', file: (dev ? 'jquery.nailthumb.1.1.css' : 'jquery.nailthumb.1.1.min.css')], disposition: 'head'
+        
+        resource url:[dir: 'js', file: (dev ? 'jquery.nailthumb.1.1.js' : 'jquery.nailthumb.1.1.min.js')]
+    }
 }
