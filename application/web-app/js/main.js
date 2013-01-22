@@ -90,7 +90,7 @@ $(function () {
             photoset_id: '72157627363883396'
             
         },
-	    dataType: 'jsonp',
+        dataType: 'jsonp',
         jsonp: 'jsoncallback'
     }).done(function (data) {
         var gallery = $('#gallery'),
@@ -109,33 +109,33 @@ $(function () {
     });
     
     // Get Favorites
-    $.ajax({
-        url: 'http://api.flickr.com/services/rest/',
-        data: {
-            //user_id: '52219389@N06', //Silvia
-            user_id: '23591401@N08', //Me
-            format: 'json',
-            method: 'flickr.favorites.getPublicList',
-            //method: 'flickr.interestingness.getList',
-            //api_key: '0953a567eecb704c7f78aafb541f1ace' //Mine
-            api_key: '11be2a1d4f5adffc96d0bec40f5d465d' //Silvia
-            //api_key: '7617adae70159d09ba78cfec73c13be3' //Original
-        },
-	    dataType: 'jsonp',
-        jsonp: 'jsoncallback'
-    }).done(function (data) {
-        var gallery = $('#gallery'),
-            url;
-        $('<div>Favorites</div>').appendTo(gallery);
-        $.each(data.photos.photo, function (index, photo) {
-            url = 'http://farm' + photo.farm + '.static.flickr.com/' +
-                photo.server + '/' + photo.id + '_' + photo.secret;
-            $('<a rel="gallery"/>')
-                .append($('<img>').prop('src', url + '_s.jpg'))
-                .prop('href', url + '_b.jpg')
-                .prop('title', photo.title)
-                .appendTo(gallery);
-        });
-        $('<br/><br/>').appendTo(gallery);
-    });
+//    $.ajax({
+//        url: 'http://api.flickr.com/services/rest/',
+//        data: {
+//            //user_id: '52219389@N06', //Silvia
+//            user_id: '23591401@N08', //Me
+//            format: 'json',
+//            method: 'flickr.favorites.getPublicList',
+//            //method: 'flickr.interestingness.getList',
+//            //api_key: '0953a567eecb704c7f78aafb541f1ace' //Mine
+//            api_key: '11be2a1d4f5adffc96d0bec40f5d465d' //Silvia
+//            //api_key: '7617adae70159d09ba78cfec73c13be3' //Original
+//        },
+//	    dataType: 'jsonp',
+//        jsonp: 'jsoncallback'
+//    }).done(function (data) {
+//        var gallery = $('#gallery'),
+//            url;
+//        $('<div>Favorites</div>').appendTo(gallery);
+//        $.each(data.photos.photo, function (index, photo) {
+//            url = 'http://farm' + photo.farm + '.static.flickr.com/' +
+//                photo.server + '/' + photo.id + '_' + photo.secret;
+//            $('<a rel="gallery"/>')
+//                .append($('<img>').prop('src', url + '_s.jpg'))
+//                .prop('href', url + '_b.jpg')
+//                .prop('title', photo.title)
+//                .appendTo(gallery);
+//        });
+//        $('<br/><br/>').appendTo(gallery);
+//    });
 });
